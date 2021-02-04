@@ -7,8 +7,6 @@ import { PublicUser } from 'shared/user/PublicUser'
 import { ChapterData } from '../../../pages/Chapter/Chapter.controller'
 import { chaptersByCourse } from '../../../pages/Course/Course.data'
 // PLACEHOLDER.
-// Use Select menu to choose the
-import { Select } from '../Select/Select.controller'
 import { Option } from '../Select/Select.view'
 import { DrawerItem, DrawerMask, DrawerStyled, DrawerStyledLogin } from './Drawer.style'
 
@@ -49,14 +47,14 @@ export const ChapterDrawerView = ({
     <DrawerStyled className={`${showingChapters}`}>
       <h1>Chapters</h1>
 
-      <Select
+      {/* <Select
         options={[
           { name: 'Near101', path: 'near101' },
           { name: 'Near102', path: 'near102' },
         ]}
         defaultOption={activeCourse}
         selectCallback={(e) => changeCourseCallback(e)}
-      />
+      /> */}
 
       {chaptersByCourse[activeCourse.path].map((chapter: ChapterData) => (
         <DrawerItem key={chapter.pathname} className={pathname === chapter.pathname ? 'current-path' : 'other-path'}>
